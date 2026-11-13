@@ -3,8 +3,8 @@ Rancang Bangun Sistem Informasi Manajemen Service Elektronik Berbasis Web
 dengan Fitur Monitoring Proses Perbaikan dan Pelacakan Status Servis.
 
 ## Anggota Tim
-- Nama 1 (NIM)
-- Nama 2 (NIM)
+- Dzikri Alfaiz Padwananda
+- Ahmad Reza Shan Pahlevy
 
 ## Status Progres
 - [x] Desain front-end (prototype tampilan: login, teknisi, pembeli)
