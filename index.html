@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login · Tartarus Access</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<svg id="scene" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+ <defs><linearGradient id="ray" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+ <g fill="#9ff6ff" opacity=".5">
+  <polygon points="780,0 1010,0 970,46 880,70 810,40"/>
+  <polygon points="1060,0 1330,0 1290,52 1180,64 1100,36"/>
+  <polygon points="1380,0 1600,0 1600,58 1500,70 1420,40"/>
+  <polygon points="520,0 700,0 660,34 590,50"/>
+  <polygon points="1180,86 1300,80 1260,110 1200,112"/>
+ </g>
+ <polygon points="1180,0 1280,0 1010,900 850,900" fill="url(#ray)" opacity=".4"/>
+ <polygon points="1360,0 1420,0 1260,900 1170,900" fill="url(#ray)" opacity=".3"/>
+ <rect x="1390" y="160" width="70" height="740" fill="#fff" opacity=".07"/>
+ <rect x="1500" y="220" width="40" height="680" fill="#fff" opacity=".05"/>
+ <g id="stairs"></g>
+</svg>
+<div class="bubbles" id="bubbles" aria-hidden="true"></div>
+
+<div class="tag">TARTARUS // ACCESS</div>
+<div class="tag r"><span id="clk">00:00</span> · DARK HOUR</div>
+<div class="hints"><span><kbd>↑↓</kbd>SELECT</span><span><kbd>ENTER</kbd>CONFIRM</span><span><kbd>ESC</kbd>BACK</span></div>
+
+<main class="stage">
+ <section class="left">
+  <svg class="art" viewBox="0 0 600 900" preserveAspectRatio="xMinYMid slice" aria-hidden="true">
+   <polygon points="-40,170 330,0 430,190 290,340 360,540 170,760 -40,820" fill="#fff"/>
+   <polygon points="330,0 430,190 330,236" fill="#35e0ff"/>
+   <polygon points="-40,560 200,470 260,600 120,700 -40,700" fill="#bff6ff"/>
+   <polygon points="150,300 300,340 260,430 120,400" fill="#2fd6ff" opacity=".85"/>
+   <polygon points="380,430 470,470 420,540" fill="#ff8fd0" opacity=".8"/>
+   <polygon points="70,860 160,760 250,880" fill="#35e0ff" opacity=".7"/>
+   <g fill="none" stroke-linecap="round">
+    <path d="M200 40 C 120 190, 230 300, 150 470" stroke="#000" stroke-width="26"/>
+    <path d="M300 60 C 250 160, 330 260, 270 380" stroke="#000" stroke-width="14"/>
+    <path d="M60 520 C 130 560, 160 620, 120 690" stroke="#1530d8" stroke-width="10"/>
+    <path d="M240 520 C 330 580, 350 660, 300 760" stroke="#1530d8" stroke-width="6"/>
+   </g>
+  </svg>
+  <nav class="menu" role="tablist" aria-label="Mode akun">
+   <button class="mi on" role="tab" aria-selected="true" data-m="login">Log in</button>
+   <button class="mi" role="tab" aria-selected="false" data-m="signup">Sign up</button>
+   <button class="mi" role="tab" aria-selected="false" data-m="recover">Recover</button>
+  </nav>
+ </section>
+
+ <section class="right">
+  <div class="panel">
+   <form class="card" id="form" novalidate>
+    <h2 id="title">LOG IN</h2>
+    <div class="rs" data-for="login signup" role="radiogroup" aria-label="Masuk sebagai">
+     <label><input type="radio" name="role" value="teknisi" checked> Teknisi</label>
+     <label><input type="radio" name="role" value="pembeli"> Pembeli</label>
+    </div>
+    <div data-for="login signup">
+     <label for="user">Username</label>
+     <input id="user" name="user" type="text" autocomplete="username" required>
+    </div>
+    <div data-for="signup recover" hidden>
+     <label for="email">Your email</label>
+     <input id="email" name="email" type="email" autocomplete="email" required>
+    </div>
+    <div data-for="login signup">
+     <label for="pass">Password</label>
+     <div class="pw">
+      <input id="pass" name="pass" type="password" autocomplete="current-password" minlength="6" required>
+      <button type="button" id="eye">SHOW</button>
+     </div>
+    </div>
+    <label class="chk" data-for="login"><input type="checkbox" name="remember"> Remember me</label>
+    <div class="row">
+     <button class="go" type="submit"><span class="ab">A</span><span id="btnLbl">CONFIRM</span></button>
+     <button class="lnk" type="button" id="forgot" data-for="login">FORGOT PASSWORD?</button>
+    </div>
+    <p class="msg" id="msg" role="status" aria-live="polite"></p>
+   </form>
+  </div>
+ </section>
+</main>
+
+<script src="js/scene.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pembeli · Servis Center</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body data-role="pembeli">
+<svg id="scene" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+ <defs><linearGradient id="ray" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+ <g fill="#9ff6ff" opacity=".5"><polygon points="780,0 1010,0 970,46 880,70 810,40"/><polygon points="1060,0 1330,0 1290,52 1180,64 1100,36"/><polygon points="1380,0 1600,0 1600,58 1500,70 1420,40"/><polygon points="520,0 700,0 660,34 590,50"/></g>
+ <polygon points="1180,0 1280,0 1010,900 850,900" fill="url(#ray)" opacity=".4"/>
+ <rect x="1390" y="160" width="70" height="740" fill="#fff" opacity=".07"/>
+ <g id="stairs"></g>
+</svg>
+<div class="bubbles" id="bubbles" aria-hidden="true"></div>
+
+<div class="tag">TARTARUS // SERVIS</div>
+<div class="tag r"><span id="clk">00:00</span> · DARK HOUR</div>
+<div class="roles"><button id="logout">Keluar</button></div>
+<div class="hints"><span><kbd>↑↓</kbd>SELECT</span><span><kbd>ESC</kbd>CLOSE CHAT</span></div>
+
+<main class="stage">
+ <nav class="menu" id="menu" role="tablist" aria-label="Menu halaman"></nav>
+ <section class="panel"><div class="card"><div class="in" id="view"></div></div></section>
+</main>
+
+<button class="go fab" id="fab"><span class="ab">A</span>CHAT</button>
+<div class="cw" id="cw" hidden>
+ <div class="ci">
+  <div class="hd"><b>CHAT</b><select id="who" aria-label="Lawan bicara"></select><button id="x" aria-label="Tutup chat">×</button></div>
+  <div class="log" id="log" aria-live="polite"></div>
+  <form class="cf" id="cf"><input id="msg" autocomplete="off" placeholder="Tulis pesan…" aria-label="Pesan"><button class="sm" type="submit">KIRIM</button></form>
+ </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
